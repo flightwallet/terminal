@@ -1,7 +1,8 @@
 import React, { Fragment, Component } from 'react';
 import { Card, CardBody, Col, Row } from 'reactstrap';
-import FormGoup from './FormGroup';
 import Qrcode from '../../../shared/components/Qrcode';
+import FormGroup from './FormGroup';
+
 
 class ExampleCard extends Component {
   constructor() {
@@ -37,7 +38,7 @@ class ExampleCard extends Component {
                   <h5 className="bold-text">RAW transaction</h5>
                   <h5 className="subhead">Enter or see QR</h5>
                 </div>
-                <FormGoup onClick={this.handleShowCamera} data={data} />
+                <FormGroup onClick={this.handleShowCamera} data={data} />
               </CardBody>
             </Card>
           </Col>

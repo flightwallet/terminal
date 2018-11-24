@@ -5,15 +5,15 @@ import ExampleCard from './components/ExampleCard';
 import { generateQr } from '../../redux/actions/generateQr';
 
 
-const ExamplePage = () => (
-  <Container className="dashboard">
+const ExamplePage = props => (
+  <Container className="dashboard" >
     <Row>
       <Col md={12}>
         <h3 className="page-title">Generate QR code</h3>
       </Col>
     </Row>
     <Row>
-      <ExampleCard generateQr={generateQr} />
+      <ExampleCard generateQr={generateQr} {...props} />
     </Row>
   </Container>
 );

@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { ConnectedRouter } from 'connected-react-router';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../scss/app.scss';
 import Router from './Router';
-import store from './store';
+import store, { history } from './store';
 import ScrollToTop from './ScrollToTop';
 
 class App extends Component {
@@ -29,7 +29,7 @@ class App extends Component {
     const { loaded, loading } = this.state;
     return (
       <Provider store={store}>
-        <BrowserRouter>
+        <ConnectedRouter history={history}>
           <ScrollToTop>
             {!loaded &&
             <div className={`load${loading ? '' : ' loaded'}`}>
@@ -44,7 +44,7 @@ class App extends Component {
               <Router />
             </div>
           </ScrollToTop>
-        </BrowserRouter>
+        </ConnectedRouter>
       </Provider>
     );
   }

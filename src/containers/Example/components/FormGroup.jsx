@@ -1,37 +1,32 @@
 import React from 'react';
-import QrcodeIcon from 'mdi-react/QrcodeIcon';
-import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
+import QrcodeIcon from 'mdi-react/QrcodeIcon';
 
 
-const FromGroup = props => (
+const FromGroup = ({ onClick, data }) => (
   <div className="form form--horizontal">
-    <button onClick={() => props.dispatch(('textarea', 'asdasd'))}>
-      asdas
-    </button>
     <div className="form__form-group">
       <span className="form__form-group-label">RAW Transaction</span>
       <div className="form__form-group-field">
-        <Field
-          name="defaultInput"
-          component="input"
+        <input
+          name="textarea"
           type="text"
-          placeholder="0100000001d2cbf123aaf43915f890a6786a50c95cf16666ce4e86e3"
+          value={data}
         />
         <button
           className={`form__form-group-button${true ? ' active' : ''}`}
-          onClick={props.onClick}
+          onClick={onClick}
         ><QrcodeIcon />
         </button>
       </div>
     </div>
     <div className="form__form-group">
-      <span className="form__form-group-label">Hex Transaction</span>
+      <span className="form__form-group-label">Hex transaction</span>
       <div className="form__form-group-field">
-        <Field
+        <textarea
           name="textarea"
-          component="textarea"
           type="text"
+          value={data}
         />
       </div>
     </div>
@@ -40,10 +35,11 @@ const FromGroup = props => (
 
 FromGroup.propTypes = {
   onClick: PropTypes.func.isRequired,
-  dispatch: PropTypes.func.isRequired,
+  data: PropTypes.string,
 };
 
+FromGroup.defaultProps = {
+  data: '',
+};
 
-export default reduxForm({
-  form: 'horizontal_form', // a unique identifier for this form
-})(FromGroup);
+export default FromGroup;

@@ -13,7 +13,7 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
     case GENERATE_QR_CODE:
-      return { ...state, show: true, options: action.options };
+      return { show: true, options: action.options };
 
     case SHOW_QR_CODE:
       return { ...state, show: true };
