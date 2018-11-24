@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/easydev/precache-manifest.212125736eadc21c1ff321ddd3c54469.js"
+  "https://flightwallet.org/terminal/precache-manifest.396ee0115d695f62d1801067fdf16901.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/easydev/index.html", {
+workbox.routing.registerNavigationRoute("https://flightwallet.org/terminal/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
