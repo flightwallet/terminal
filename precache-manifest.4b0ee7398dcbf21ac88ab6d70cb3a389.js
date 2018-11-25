@@ -12,23 +12,23 @@ self.__precacheManifest = [
     "url": "https://flightwallet.org/terminal/static/js/runtime~main.b9c91dc5.js"
   },
   {
-    "revision": "9f0870a9e54c77389dd6",
-    "url": "https://flightwallet.org/terminal/static/js/main.9f0870a9.chunk.js"
+    "revision": "3589e285ad551f45cf9b",
+    "url": "https://flightwallet.org/terminal/static/js/main.3589e285.chunk.js"
   },
   {
-    "revision": "feb041e63d7c5d7e66d8",
-    "url": "https://flightwallet.org/terminal/static/js/1.feb041e6.chunk.js"
+    "revision": "f2d3fee5f6efc6ead8c0",
+    "url": "https://flightwallet.org/terminal/static/js/1.f2d3fee5.chunk.js"
   },
   {
-    "revision": "9f0870a9e54c77389dd6",
+    "revision": "3589e285ad551f45cf9b",
     "url": "https://flightwallet.org/terminal/static/css/main.8dce9ed0.chunk.css"
   },
   {
-    "revision": "feb041e63d7c5d7e66d8",
+    "revision": "f2d3fee5f6efc6ead8c0",
     "url": "https://flightwallet.org/terminal/static/css/1.a7ae975b.chunk.css"
   },
   {
-    "revision": "ccb997bdd5d35953491920c7de0147d1",
+    "revision": "ddb418da1ae091ba1a968bc196b63270",
     "url": "https://flightwallet.org/terminal/index.html"
   }
 ];
