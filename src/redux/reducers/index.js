@@ -6,6 +6,7 @@ import webcam from './webcam';
 import generateQr from './generateQr';
 import themeReducer from './themeReducer';
 import sidebarReducer from './sidebarReducer';
+import parseURLParamsReducer from './parseURLParams';
 
 
 export default history => combineReducers({
@@ -15,4 +16,5 @@ export default history => combineReducers({
   sidebar: sidebarReducer,
   qrcode: generateQr,
   camera: webcam,
+  URLParams: parseURLParamsReducer,
 });

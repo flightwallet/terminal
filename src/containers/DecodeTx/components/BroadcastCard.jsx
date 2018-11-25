@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardBody, Col } from 'reactstrap';
-import FormGoup from './FormGroup';
+import BroadcastTxForm from './BroadcastTxForm';
 
 
-const ExampleCard = ({ broadcastTx, match }) => (
+const BroadcastCard = ({ broadcastTx, rawTx, autopublish }) => (
   <Col md={12}>
     <Card>
       <CardBody>
@@ -12,20 +12,16 @@ const ExampleCard = ({ broadcastTx, match }) => (
           <h5 className="bold-text">Decode and publish transaction</h5>
           <h5 className="subhead">Enter or see QR</h5>
         </div>
-        <FormGoup broadcastTx={broadcastTx} params={match.params} />
+        <BroadcastTxForm broadcastTx={broadcastTx} rawTx={rawTx} autopublish={autopublish} />
       </CardBody>
     </Card>
   </Col>
 );
 
-ExampleCard.propTypes = {
+BroadcastCard.propTypes = {
   broadcastTx: PropTypes.func.isRequired,
-  match: PropTypes.shape({
-    isExact: PropTypes.bool,
-    params: PropTypes.object,
-    path: PropTypes.string,
-    url: PropTypes.string,
-  }).isRequired,
+  autopublish: PropTypes.string,
+  rawTx: PropTypes.string,
 };
 
-export default ExampleCard;
+export default BroadcastCard;

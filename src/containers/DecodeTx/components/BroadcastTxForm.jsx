@@ -3,27 +3,40 @@ import PropTypes from 'prop-types';
 import { Button } from 'reactstrap';
 
 
-class FormGroup extends Component {
+class BroadcastTxForm extends Component {
   static propTypes = {
     broadcastTx: PropTypes.func.isRequired,
-    params: PropTypes.objectOf(PropTypes.object).isRequired,
+    autopublish: PropTypes.string.isRequired,
+    rawTx: PropTypes.string,
   };
 
   constructor() {
     super();
 
     this.state = {
+      isAutopublishLaunched: false,
       error: false,
       msgError: '',
     };
   }
 
-  componentDidMount() {
-    const { params: { rawTx } } = this.props;
-    const check = RegExp(/^[0-9a-fA-F]+$/).test(rawTx);
+  componentWillReceiveProps() {
+    const { rawTx, autopublish } = this.props;
+    console.log('rawTx', rawTx)
 
-    if (rawTx && rawTx.length > 0 && check) {
+    const check = RegExp(/^[0-9a-fA-F]+$/).test(rawTx);
+    const isTxOk = rawTx && rawTx.length > 0 && check
+
+    if (isTxOk) {
       this.textArea.value = rawTx;
+    }
+
+    if (autopublish && isTxOk && !this.state.isAutopublishLaunched) {
+      this.setState({
+        isAutopublishLaunched: true
+      })
+
+      this.handleSendTx(rawTx)
     }
   }
 
@@ -66,13 +79,13 @@ class FormGroup extends Component {
         {
           txSend && (
             <span>
-              Transaction hash:
+              Transaction hash:{' '}
               <a
                 href={`https://live.blockcypher.com/btc-testnet/tx/${txInfo}`}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                {' '}{txInfo}
+                {txInfo}
               </a>
             </span>
           )
@@ -85,4 +98,4 @@ class FormGroup extends Component {
   }
 }
 
-export default FormGroup;
+export default BroadcastTxForm;
