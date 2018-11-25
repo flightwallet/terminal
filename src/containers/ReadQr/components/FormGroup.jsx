@@ -9,9 +9,9 @@ const FromGroup = ({ onClick, data }) => (
       <span className="form__form-group-label">RAW Transaction</span>
       <div className="form__form-group-field">
         <input
-          name="textarea"
+          name="textInput"
           type="text"
-          value={data}
+          defaultValue={data}
         />
         <button
           className={`form__form-group-button${true ? ' active' : ''}`}
@@ -24,9 +24,9 @@ const FromGroup = ({ onClick, data }) => (
       <span className="form__form-group-label">Hex transaction</span>
       <div className="form__form-group-field">
         <textarea
-          name="textarea"
+          name="textArea"
           type="text"
-          value={data}
+          defaultValue={data}
         />
       </div>
     </div>

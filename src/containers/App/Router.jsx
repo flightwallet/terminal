@@ -4,19 +4,19 @@ import { Switch } from 'react-router-dom';
 import Layout from '../Layout/index';
 import MainWrapper from './MainWrapper';
 
-import ExamplePageOne from '../Example/index';
-import ExamplePageTwo from '../ExampleTwo/index';
+import ReadQr from '../ReadQr';
+import DecodeTx from '../DecodeTx/';
 import GenerateInvoice from '../GenerateInvoice';
 
 const Pages = () => (
   <Switch>
-    <Route path="/read" component={ExamplePageOne} />
+    <Route path="/read" component={ReadQr} />
 
     <Route path="/create-invoice/:address-:amount" component={GenerateInvoice} />
     <Route path="/create-invoice" component={GenerateInvoice} />
 
-    <Route path="/decode/tx:rawTx" component={ExamplePageTwo} />
-    <Route path="/decode/tx" component={ExamplePageTwo} />
+    <Route path="/decode/tx/:rawTx" component={DecodeTx} />
+    <Route path="/decode/tx" component={DecodeTx} />
   </Switch>
 );
 

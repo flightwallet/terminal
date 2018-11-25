@@ -58,7 +58,7 @@ class FormGroup extends Component {
             <textarea
               name="rawTx"
               type="text"
-              style={{ height: '400px' }}
+              style={{ height: '350px' }}
               ref={(el) => { this.textArea = el; return true; }}
             />
           </div>

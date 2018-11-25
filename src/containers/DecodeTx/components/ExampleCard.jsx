@@ -20,7 +20,12 @@ const ExampleCard = ({ broadcastTx, match }) => (
 
 ExampleCard.propTypes = {
   broadcastTx: PropTypes.func.isRequired,
-  match: PropTypes.objectOf(PropTypes.objectOf).isRequired,
+  match: PropTypes.shape({
+    isExact: PropTypes.bool,
+    params: PropTypes.object,
+    path: PropTypes.string,
+    url: PropTypes.string,
+  }).isRequired,
 };
 
 export default ExampleCard;

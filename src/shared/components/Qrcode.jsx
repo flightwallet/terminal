@@ -34,6 +34,12 @@ class Qrcode extends Component {
     }
   }
 
+  onError = (error) => {
+    if (error) {
+      console.log('error', error + error.message)
+    }
+  }
+
   render() {
     const { style } = this.props;
 
@@ -41,6 +47,7 @@ class Qrcode extends Component {
       <QrReader
         delay={500}
         style={style}
+        onError={this.onError}
         onScan={this.handleScan}
       />
     );

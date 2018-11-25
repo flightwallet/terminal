@@ -1487,7 +1487,7 @@ Supported overrides:
 - [`coverageThreshold`](https://facebook.github.io/jest/docs/en/configuration.html#coveragethreshold-object)
 - [`snapshotSerializers`](https://facebook.github.io/jest/docs/en/configuration.html#snapshotserializers-array-string)
 
-Example package.json:
+ReadQr package.json:
 
 ```json
 {

@@ -10,7 +10,12 @@ class CreateQr extends Component {
     dispatch: PropTypes.func.isRequired,
     generateQr: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired,
-    match: PropTypes.objectOf(PropTypes.object).isRequired,
+    match: PropTypes.shape({
+      isExact: PropTypes.bool,
+      params: PropTypes.object,
+      path: PropTypes.string,
+      url: PropTypes.string,
+    }).isRequired,
   };
 
 
@@ -77,8 +82,7 @@ class CreateQr extends Component {
             <Card>
               <CardBody>
                 <div className="card__title">
-                  <h5 className="bold-text">See QR code</h5>
-                  <h5 className="subhead">Scan this code</h5>
+                  <h5 className="bold-text">Scan this code</h5>
                 </div>
                 <canvas
                   style={{ display: show ? 'block' : 'none' }}
