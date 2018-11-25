@@ -10,13 +10,13 @@ import GenerateInvoice from '../GenerateInvoice';
 
 const Pages = () => (
   <Switch>
-    <Route path="/read" component={ReadQr} />
+    <Route path="/terminal/read" component={ReadQr} />
 
-    <Route path="/create-invoice/:address-:amount" component={GenerateInvoice} />
-    <Route path="/create-invoice" component={GenerateInvoice} />
+    <Route path="/terminal/create-invoice/:address-:amount" component={GenerateInvoice} />
+    <Route path="/terminal/create-invoice" component={GenerateInvoice} />
 
-    <Route path="/decode/tx/:rawTx" component={DecodeTx} />
-    <Route path="/decode/tx" component={DecodeTx} />
+    <Route path="/terminal/decode-tx/:rawTx" component={DecodeTx} />
+    <Route path="/terminal/decode-tx" component={DecodeTx} />
   </Switch>
 );
 
