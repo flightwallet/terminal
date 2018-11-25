@@ -1,7 +1,7 @@
 {
   "main.css": "https://flightwallet.org/terminal/static/css/main.8dce9ed0.chunk.css",
-  "main.js": "https://flightwallet.org/terminal/static/js/main.3589e285.chunk.js",
-  "main.js.map": "https://flightwallet.org/terminal/static/js/main.3589e285.chunk.js.map",
+  "main.js": "https://flightwallet.org/terminal/static/js/main.b3783bb6.chunk.js",
+  "main.js.map": "https://flightwallet.org/terminal/static/js/main.b3783bb6.chunk.js.map",
   "static/css/1.a7ae975b.chunk.css": "https://flightwallet.org/terminal/static/css/1.a7ae975b.chunk.css",
   "static/js/1.f2d3fee5.chunk.js": "https://flightwallet.org/terminal/static/js/1.f2d3fee5.chunk.js",
   "static/js/1.f2d3fee5.chunk.js.map": "https://flightwallet.org/terminal/static/js/1.f2d3fee5.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/media/app.scss": "https://flightwallet.org/terminal/static/media/logo_dark.b04f23e3.svg",
   "static/css/1.a7ae975b.chunk.css.map": "https://flightwallet.org/terminal/static/css/1.a7ae975b.chunk.css.map",
   "index.html": "https://flightwallet.org/terminal/index.html",
-  "precache-manifest.706afae2de3a5e5cb477586015958390.js": "https://flightwallet.org/terminal/precache-manifest.706afae2de3a5e5cb477586015958390.js",
+  "precache-manifest.915c8c1895fe669c89a44ec646e823af.js": "https://flightwallet.org/terminal/precache-manifest.915c8c1895fe669c89a44ec646e823af.js",
   "service-worker.js": "https://flightwallet.org/terminal/service-worker.js"
 }
