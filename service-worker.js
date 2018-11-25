@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "https://flightwallet.org/terminal/precache-manifest.4b0ee7398dcbf21ac88ab6d70cb3a389.js"
+  "https://flightwallet.org/terminal/precache-manifest.706afae2de3a5e5cb477586015958390.js"
 );
 
 workbox.clientsClaim();

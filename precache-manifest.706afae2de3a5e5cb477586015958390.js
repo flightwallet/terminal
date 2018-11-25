@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "https://flightwallet.org/terminal/static/css/1.a7ae975b.chunk.css"
   },
   {
-    "revision": "ddb418da1ae091ba1a968bc196b63270",
+    "revision": "8fd78b071c1aa66e5b272a482bc5c0f2",
     "url": "https://flightwallet.org/terminal/index.html"
   }
 ];
