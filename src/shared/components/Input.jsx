@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class Input extends PureComponent {
   static propTypes = {
-    ref: PropTypes.func.isRequired,
+    setRef: PropTypes.func.isRequired,
     name: PropTypes.string,
     type: PropTypes.string,
     label: PropTypes.string,
@@ -25,7 +25,7 @@ class Input extends PureComponent {
 
   render() {
     const {
-      ref, name, type, label, value, placeholder,
+      setRef, name, type, label, value, placeholder,
     } = this.props;
 
     return (
@@ -35,7 +35,7 @@ class Input extends PureComponent {
           <input
             name={name}
             type={type}
-            ref={ref}
+            ref={setRef}
             defaultValue={value}
             placeholder={placeholder}
           />

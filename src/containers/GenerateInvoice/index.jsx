@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
-import CreateQr from './components/CraeteQr';
+import CreateQr from './components/CreateQr';
 import { generateQr } from '../../redux/actions/generateQr';
 
 const GenerateInvoice = props => (
