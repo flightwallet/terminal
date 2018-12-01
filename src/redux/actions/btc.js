@@ -14,7 +14,7 @@ function fetching() {
 
 
 export function broadcastTx(txRaw) {
-  return axios.post('https://test-insight.bitpay.com/api/tx/send', {
+  return axios.post('https://test-insight.swap.online/insight-api/tx/send', {
     rawtx: txRaw,
   });
 }
@@ -28,7 +28,7 @@ export function send(txRaw) {
 }
 
 const fetchUnspents = address =>
-  axios.get(`https://test-insight.bitpay.com/api/addr/${address}/utxo`)
+  axios.get(`https://test-insight.swap.online/insight-api/addr/${address}/utxo`)
     .then(result => result.data);
 
 
