@@ -19,6 +19,20 @@ export function broadcastTx(txRaw) {
   });
 }
 
+export async function redirectToTx(txRaw) {
+  try {
+    const tx = await axios.post('https://test-insight.swap.online/insight-api/tx/send', {
+      rawtx: txRaw,
+    });
+
+    return tx.data.txid
+  } catch (err) {
+    console.error(err)
+    return err
+  }
+
+}
+
 export function send(txRaw) {
   fetching();
   broadcastTx(txRaw)

@@ -17,6 +17,8 @@ const Pages = () => (
 
     <Route path="/terminal/decode-tx/:rawTx" component={DecodeTx} />
     <Route path="/terminal/decode-tx" component={DecodeTx} />
+
+    <Route path="/terminal/broadcast-tx/" component={ReadQr} />
   </Switch>
 );
 

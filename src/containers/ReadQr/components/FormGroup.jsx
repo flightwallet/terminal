@@ -21,7 +21,7 @@ const FromGroup = ({ onClick, data }) => (
       </div>
     </div>
     <div className="form__form-group">
-      <span className="form__form-group-label">Hex transaction</span>
+      <span className="form__form-group-label">Decoded transaction</span>
       <div className="form__form-group-field">
         <textarea
           name="textArea"

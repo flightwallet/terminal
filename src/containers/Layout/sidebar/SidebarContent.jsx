@@ -29,8 +29,9 @@ class SidebarContent extends Component {
         </ul>
         <ul className="sidebar__block">
           <SidebarCategory title="Options for tx" icon="diamond">
-            <SidebarLink title="Decode transaction" route="read" onClick={this.hideSidebar} />
-            <SidebarLink title="Broadcast transaction" route="decode-tx" onClick={this.hideSidebar} />
+            <SidebarLink title="Read transaction" route="read" onClick={this.hideSidebar} />
+            <SidebarLink title="Decode transaction" route="decode-tx" onClick={this.hideSidebar} />
+            <SidebarLink title="Broadcast transaction" route="broadcast-tx" onClick={this.hideSidebar} />
             <SidebarLink title="Generate-invoice" route="create-invoice" onClick={this.hideSidebar} />
           </SidebarCategory>
         </ul>
